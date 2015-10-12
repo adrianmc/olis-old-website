@@ -21,6 +21,22 @@
   font-weight: 700;
 }
 
+.tagline-icons {
+  font-size: 60px;
+}
+
+.tagline-less {
+  color: #FF3300;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.tagline-more {
+  color: #66FF33;
+  font-weight: 700;
+  font-size: 80px;
+}
+
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
@@ -109,7 +125,7 @@ a {
 	-o-transition: background-color .4s linear, color .4s linear;
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
-	color: #4183D7;
+	color: #12A5F4;
 }
 a:hover,
 a:focus {
@@ -170,14 +186,15 @@ input {
 	}	
 
 .btn-blue {
-	background: #4183D7;
+	background: #12A5F4;
 	color: white
 }
 
 
 /* HEADER SECTION */
 #h {
-	background: url(../img/header.jpg) no-repeat center top;
+	/*background: url(../img/header.jpg) no-repeat center top;*/
+  background-color: #12A5F4;
 	padding-top: 150px;
 	text-align:center;
 	background-attachment: relative;

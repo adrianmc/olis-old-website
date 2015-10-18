@@ -1,47 +1,40 @@
 /*
- * Author: Adrian Li
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
  *
- * Project Name: Olis
- * URL: http://OlisApp.com
+ * Project Name: Landing Sumo - Coming Soon 01
+ * URL: http://LandingSumo.com
  * Version: 1.0
  */
 
 /* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
-@import url(http://fonts.googleapis.com/css?family=Raleway:900,700,400);
 
 /*  ################################################################
   0. CUSTOM STYLES
 ################################################################# */
 
-h1 {
-  font-size: 60px;
-}
-
 #h h1.logo-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 80px;
+  font-size: 120px;
   font-weight: 700;
 }
 
-#h {
-  min-height: none;
+.tagline-icons {
+  font-size: 60px;
 }
 
-@media screen and (min-width: 768px) {
-  #h h1.logo-text {
-    font-size: 160px;
-  }
-  #h {
-    min-height: 650px;
-  }
+.tagline-less {
+  color: #FF3300;
+  font-weight: 700;
+  font-size: 80px;
 }
 
-/* Grey Section */
-#g {
-  padding-bottom: 80px;
-  padding-top: 80px;
-  background: #e0e0e0;
+.tagline-more {
+  color: #66FF33;
+  font-weight: 700;
+  font-size: 80px;
 }
 
 /*	################################################################
@@ -51,7 +44,7 @@ h1 {
 * { 
 	margin: 0;
 	padding: 0px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
 } 
 body { 
 	background: #fff; 
@@ -60,18 +53,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-	font-weight: 700;
+    font-family: 'Lato', sans-serif;
+	font-weight: 300;
 }
 
 
 p { 
 	padding: 0; 
 	margin-bottom: 12px; 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	font-size: 18px; 
-	line-height: 28px;
+	font-size: 16px; 
+	line-height: 26px;
 	color: #666; 
 	margin-top: 10px; 
 }
@@ -91,9 +84,7 @@ body {
 }
 .centered {text-align: center}
 .mt {margin-top: 50px;}
-.mt2 {margin-top: 100px;}
 .mb {margin-bottom: 50px;}
-.mb2 {margin-bottom: 100px;}
 .mtb {margin-top: 50px; margin-bottom: 50px;}
 .mtb2 { margin-top: 100px; margin-bottom: 100px;}
 .ptb {padding-top: 80px; padding-bottom: 80px;}
@@ -134,7 +125,7 @@ a {
 	-o-transition: background-color .4s linear, color .4s linear;
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
-	color: #1abc9c;
+	color: #12A5F4;
 }
 a:hover,
 a:focus {
@@ -147,28 +138,20 @@ a:focus {
 	margin: 0px;
 }
 
-/* Bootstrap Modification */
-
-.navbar-inverse {
-	background: transparent;
-	border: transparent;
-}
-
-img {
-	padding-bottom: 10px;
-}
 
 /* FORM CONFIGURATION */
 
 input {
 	font-size: 16px;
 	min-height: 40px;
-	border-radius: 2px;
+	border-radius: 25px;
 	line-height: 20px;
 	padding: 11px 30px 12px;
 	border: 1px solid #b9b9af;
 	margin-bottom: 10px;
+	margin-top: 20px;
 	background-color: #fff;
+	opacity: 0.9;
 	-webkit-transition: background-color 0.2s;
 	transition: background-color 0.2s;
 }
@@ -180,52 +163,45 @@ input {
 	margin-right: 2px;
 }
 
+@media screen and (max-width: 767px) {
+	.subscribe-input {
+		width: 100%;
+	}
+}
+
 .subscribe-submit {
 	right: 0;
 }
 
 
-.btn-register {
-	margin-top: 15px;
+/*Buttons Configuration */
+.btn-conf {
 	border-radius: 50px;
-	margin-right: 10px;
-	top: 0px;
-	float: right;
-	font-size: 16px;
+	margin-right: 15px;
+	font-size: 11px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 13px 28px 12px 28px;
+	margin-top: 20px;
+	}	
+
+.btn-blue {
+	background: #12A5F4;
+	color: white
 }
 
-.btn-sub {
-	border-radius: 50px;
-}
-
-/* Overall Buttons*/
-.btn-theme {
-	border-radius: 50px;
-	font-size: 14px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.btn-white {
-	background: white;
-	color: #2f2f2f;
-}
-
-.btn-white:hover {
-	background: #2f2f2f;
-	color: white;
-}
 
 /* HEADER SECTION */
 #h {
 	/*background: url(../img/header.jpg) no-repeat center top;*/
   background-color: #12A5F4;
-	padding-top: 10px;
+	padding-top: 150px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	/*min-height: 650px;*/
+	min-height: 700px;
 	width: 100%;
+	color: white;
 	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -239,147 +215,91 @@ input {
 }
 
 #h h1 {
-	color: white;
 	font-weight: 900;
-	font-size: 70px;
-	letter-spacing: 5px;
+	font-size: 60px;
+	letter-spacing: 1px;
 }
 
-#h h3 {
-	color: white;
+#h h2 {
+	font-size: 38px;
+}
+
+#h h5 {
 	font-weight: 400;
+	letter-spacing: 0.8px;
+	margin-bottom: 25px;
 }
 
-#h img {
-	padding-bottom: 0px;
+/* COUNTDOWN CONFIGURATION */
+
+.countdown-divider {
+  padding: 144px 0px;
+}
+.countdown-divider img, {
+  max-width: 300px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.countdown-header h1 {
+  margin-bottom: 0px;
+}
+.countdown-header:before {
+  opacity: 0.8 !important;
 }
 
-/* White Section */
-#w {
-	background: white;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
+.countdown-header .uppercase {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+@media all and (max-width: 768px) {
+  .countdown-header img{
+    max-width: 150px;
+  }
+}
+.countdown {
+  text-align: center;
+  margin-top: 72px;
+}
+.countdown-row {
+  color: #fff;
+  font-size: 80px;
+  font-weight: 300;
+}
+.countdown-section {
+  width: 20%;
+  display: inline-block;
+}
+.countdown-amount {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.countdown-period {
+  display: block;
+  font-size: 24px;
 }
 
-#w .col-md-6 {
-	padding-right: 0px;
+@media all and (max-width: 767px) {
+  .countdown {
+    margin-top: 48px;
+  }
+  .countdown-row {
+    font-size: 36px;
+  }
+  .countdown-period {
+    font-size: 16px;
+  }
 }
 
-#w p {
-	color: #9f9f9f;
-	font-size: 16px;
+
+/* Grey Section */
+#g {
+	padding-bottom: 80px;
+	padding-top: 80px;
+	background: #f5f5f5;
 }
 
-
-/* Blue Section - Picton */
-#picton {
-	background: #59ABE3;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	color: white;
-}
-
-#picton .col-md-6 {
-	padding-left: 0px;
-}
-
-#picton p {
-	color: #e9e9e9;
-	font-size: 16px;
-}
-
-/* Blue Section - Curious */
-#curious {
-	background: #3498DB;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	color: white;
-}
-
-#curious .col-md-6 {
-	padding-right: 0px;
-}
-
-#curious p {
-	color: #e9e9e9;
-	font-size: 16px;
-}
-
-/* Blue Section - Malibu */
-#malibu {
-	background: #6BB9F0;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	color: white;
-}
-
-#malibu .col-md-6 {
-	padding-left: 0px;
-}
-
-#malibu p {
-	color: #e9e9e9;
-	font-size: 16px;
-}
-
-/* Blue Section - Jelly */
-#jelly {
-	background: #2574A9;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	color: white;
-}
-
-#jelly p {
-	color: #e9e9e9;
-	font-size: 16px;
-}
-
-#jelly h1 {
-	font-size: 200px;
-}
-
-#jelly h3 {
-	margin-top: 10px;
-}
-
-/* FOOTER */
-#f {
-	/*background: #2f2f2f;*/
-	background: #e0e0e0;
-	width: 100%;
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-#f h4 {
-	font-weight: 400;
-	/*text-align: center;*/
-	font-size: 24px;
-}
-
-/* CREDIT */
-#c {
-	background: #5A5A5A;
-	padding: 20px;
-	color: white;
-}
-
-#c p {
-	font-size: 16px;
-	color: #CCCCCC;
-}
-
-#c h4 {
-	font-size: 18px;
-}
-
-/* OVERFLOW */
-.of {
-	overflow: hidden;
+#g i {
+	font-size: 22px;
+	margin-right: 16px;
 }

@@ -14,6 +14,19 @@
   0. CUSTOM STYLES
 ################################################################# */
 
+.data-text {
+	/*padding-left: 25px;
+	padding-right: 25px;*/
+}
+
+.lg-text {
+	font-size: 120px;
+}
+
+.xl-text {
+	font-size: 240px;
+}
+
 .lang-links {
 	color: white;
 	position: absolute;
@@ -51,8 +64,7 @@ h1 {
 
 /* Grey Section */
 #g {
-  padding-bottom: 80px;
-  padding-top: 80px;
+	padding: 80px -15px;
   background: #e0e0e0;
 }
 

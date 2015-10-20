@@ -270,7 +270,9 @@ a:focus {
 
 .nopadding {
 	padding: 0px !important;
-	margin: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	/*margin: 0px;*/
 }
 
 /* Bootstrap Modification */

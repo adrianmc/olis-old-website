@@ -395,69 +395,79 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Language = function Language(_ref) {
+  var _ref$language = _ref.language;
+  var language = _ref$language === undefined ? 'Elvish' : _ref$language;
+  var _ref$tooltipText = _ref.tooltipText;
+  var tooltipText = _ref$tooltipText === undefined ? 'This is a tooltip.' : _ref$tooltipText;
   return _react2.default.createElement(
-    'div',
-    { className: 'lang-links' },
+    'li',
+    null,
     _react2.default.createElement(
       'a',
-      {
-        className: 'dropdown-button btn-flat',
-        href: '#',
-        'data-activates': 'dropdown1',
-        'data-beloworigin': 'true',
-        'data-constrainwidth': 'false'
-      },
-      'En'
-    ),
-    _react2.default.createElement(
-      'ul',
-      { id: 'dropdown1', className: 'dropdown-content' },
-      _react2.default.createElement(
-        'li',
-        null,
-        _react2.default.createElement(
-          'a',
-          { href: '#', className: 'grey-text' },
-          '繁體中文'
-        )
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        _react2.default.createElement(
-          'a',
-          { href: '#', className: 'grey-text' },
-          '简体中文'
-        )
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        _react2.default.createElement(
-          'a',
-          { href: '#', className: 'grey-text' },
-          '한국어'
-        )
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        _react2.default.createElement(
-          'a',
-          { href: '#', className: 'grey-text' },
-          '日本語'
-        )
-      )
+      { href: '#', className: 'grey-text tooltipped', 'data-position': 'left', 'data-delay': '50', 'data-tooltip': tooltipText },
+      language
     )
   );
 };
+
+var Languages = function (_React$Component) {
+  _inherits(Languages, _React$Component);
+
+  function Languages() {
+    _classCallCheck(this, Languages);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Languages).apply(this, arguments));
+  }
+
+  _createClass(Languages, [{
+    key: 'render',
+    value: function render() {
+      var tooltipText = 'This language isn\'t available yet.';
+      return _react2.default.createElement(
+        'div',
+        { className: 'lang-links' },
+        _react2.default.createElement(
+          'a',
+          {
+            className: 'dropdown-button btn-flat',
+            href: '#',
+            'data-activates': 'dropdown1',
+            'data-beloworigin': 'true',
+            'data-constrainwidth': 'false'
+          },
+          'En'
+        ),
+        _react2.default.createElement(
+          'ul',
+          { id: 'dropdown1', className: 'dropdown-content' },
+          _react2.default.createElement(Language, { language: '繁體中文', tooltipText: tooltipText }),
+          _react2.default.createElement(Language, { language: '简体中文', tooltipText: tooltipText }),
+          _react2.default.createElement(Language, { language: '한국어', tooltipText: tooltipText }),
+          _react2.default.createElement(Language, { language: '日本語', tooltipText: tooltipText })
+        )
+      );
+    }
+  }]);
+
+  return Languages;
+}(_react2.default.Component);
+
+exports.default = Languages;
 });
 
 ;require.register("components/MainMockup", function(exports, require, module) {
@@ -604,7 +614,7 @@ exports.default = function () {
     { id: "sign-in" },
     _react2.default.createElement(
       "a",
-      { className: "waves-effect waves-teal btn-flat" },
+      { className: "waves-effect waves-light btn-flat" },
       "Sign In"
     )
   );

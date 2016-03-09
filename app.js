@@ -424,7 +424,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           'a',
-          { href: '', className: 'grey-text' },
+          { href: '#', className: 'grey-text' },
           '繁體中文'
         )
       ),
@@ -433,7 +433,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           'a',
-          { href: '', className: 'grey-text' },
+          { href: '#', className: 'grey-text' },
           '简体中文'
         )
       ),
@@ -442,7 +442,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           'a',
-          { href: '', className: 'grey-text' },
+          { href: '#', className: 'grey-text' },
           '한국어'
         )
       ),
@@ -451,7 +451,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           'a',
-          { href: '', className: 'grey-text' },
+          { href: '#', className: 'grey-text' },
           '日本語'
         )
       )

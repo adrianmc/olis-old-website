@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Roboto:400,300,500,700");
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#app,
+#content,
+#react-root {
+  width: 100%;
+  height: 100%;
+}
+#h {
+  background-color: #2f3f70;
+}
+#top .one-liner {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+#top .long-desc {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#top .long-desc p {
+  color: #fff;
+  width: 50%;
+}
+#main-mockup {
+  background-color: #2f3f70;
+}
+#main-mockup .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 50px;
+}
+#main-mockup .text p {
+  color: #fff;
+  width: 65%;
+  text-align: center;
+}
+#main-mockup img {
+  padding: 0px;
+}
+#sign-in {
+  margin-top: 20px;
+}
+#sign-in a {
+  color: #fff;
+  text-decoration: underline;
+}
+#about-us {
+  color: #2f3f70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-us .contact-list {
+  display: flex;
+  justify-content: space-around;
+}
+.more-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#benefits {
+  color: #2f3f70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#benefits .link {
+  text-decoration: underline;
+}
+#curious {
+  background-color: #fff;
+}
+#curious h3 {
+  color: #2f3f70;
+}
+#curious p {
+  color: #2f3f70;
+}
+#malibu {
+  background-color: #253256;
+}
+
+
+.contact {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.contact h5,
+.contact p {
+  color: #fff;
+}
+.contact p {
+  font-size: 12px;
+}
+.contact img {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+
+footer.page-footer {
+  background-color: #2f3f70;
+}
+footer h5,
+footer h4,
+footer p {
+  color: #fff;
+}
+footer p {
+  font-size: 15px;
+}
+
+#main-mockup h2 {
+  color: #fff;
+}
+
+#problems {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#problems div {
+  color: #2f3f70;
+}
+#problems a {
+  text-decoration: underline;
+  margin-top: 20px;
+}
+#problems i {
+  font-size: 80px;
+}
+#problems .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+/* Small screens */
+@media all and (max-width: 500px) {
+  div {
+    color: #2f3f70;
+  }
+  a {
+    text-decoration: underline;
+    margin-top: 20px;
+  }
+  i {
+    font-size: 80px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+
+/*# sourceMappingURL=app.css.map*/

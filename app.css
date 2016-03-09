@@ -152,23 +152,8 @@ footer p {
   height: 100%;
 }
 /* Small screens */
-@media all and (max-width: 500px) {
-  div {
-    color: #2f3f70;
-  }
-  a {
-    text-decoration: underline;
-    margin-top: 20px;
-  }
-  i {
-    font-size: 80px;
-  }
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-  }
+.no-margin-bot {
+  margin-bottom: 0px;
 }
 
 

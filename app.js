@@ -551,6 +551,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = require('react-router');
+
 var _Problem = require('./Problem');
 
 var _Problem2 = _interopRequireDefault(_Problem);
@@ -588,11 +590,395 @@ exports.default = function () {
     ),
     _react2.default.createElement(
       'a',
-      { className: 'waves-effect waves-teal btn-flat' },
+      { className: 'waves-effect waves-teal btn-flat', href: '/problems' },
       'So why do I need a team chat solution?'
     )
   );
 };
+});
+
+;require.register("components/ProblemsPage", function(exports, require, module) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ProblemsPage = function (_React$Component) {
+  _inherits(ProblemsPage, _React$Component);
+
+  function ProblemsPage() {
+    _classCallCheck(this, ProblemsPage);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(ProblemsPage).apply(this, arguments));
+  }
+
+  _createClass(ProblemsPage, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { id: "g" },
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-6 col-md-offset-3 centered mt" },
+            _react2.default.createElement(
+              "h1",
+              null,
+              "THE PROBLEM"
+            ),
+            _react2.default.createElement(
+              "div",
+              null,
+              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
+              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
+              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
+              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
+              _react2.default.createElement("div", { className: "small-seg grey-bg" })
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Even the best companies are unproductive."
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding of" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 col-md-offset-1 centered mt data-text", "data-effect": "slide-left" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              "At least ",
+              _react2.default.createElement(
+                "span",
+                { className: "lg-text spice1", "data-effect": "slide-bottom" },
+                "40%"
+              ),
+              " of time at work is unproductive"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 centered mt", "data-effect": "slide-right" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              _react2.default.createElement("i", { className: "ion-clock lg-text" }),
+              _react2.default.createElement("br", null),
+              "WASTED TIME"
+            ),
+            _react2.default.createElement(
+              "div",
+              null,
+              _react2.default.createElement("div", { className: "small-seg spice1-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice1-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice1-bg" })
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "People can seem busy for hours at a time. But how much of that is actually productive work?"
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding of" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 col-md-offset-1 col-md-push-5 centered mt data-text", "data-effect": "slide-right" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              "It takes ",
+              _react2.default.createElement(
+                "span",
+                { className: "lg-text spice2", "data-effect": "slide-bottom" },
+                "16"
+              ),
+              " minutes for workers to refocus after email alerts"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 col-md-pull-5 centered mt", "data-effect": "slide-left" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              _react2.default.createElement("i", { className: "ion-email lg-text" }),
+              _react2.default.createElement("br", null),
+              "EXCESSIVE EMAILS"
+            ),
+            _react2.default.createElement(
+              "div",
+              null,
+              _react2.default.createElement("div", { className: "small-seg spice2-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice2-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice2-bg" })
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Workers check their email ",
+              _react2.default.createElement(
+                "strong",
+                null,
+                "35 times"
+              ),
+              " per hour. Think about how much money is lost due to these interruptions."
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding of" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 col-md-offset-1 centered mt data-text", "data-effect": "slide-left" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              "Up to ",
+              _react2.default.createElement(
+                "span",
+                { className: "lg-text spice5", "data-effect": "slide-bottom" },
+                "80%"
+              ),
+              " of all interruptions are considered trivial"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 centered mt", "data-effect": "slide-right" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              _react2.default.createElement("i", { className: "ion-arrow-graph-down-right lg-text" }),
+              _react2.default.createElement("br", null),
+              "CONSTANT INTERRUPTION"
+            ),
+            _react2.default.createElement(
+              "div",
+              null,
+              _react2.default.createElement("div", { className: "small-seg spice5-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice5-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice5-bg" })
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Emails, phone calls, and other disruptions often derail a worker's productivity constantly throughout the workday."
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding of" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 col-md-offset-1 col-md-push-5 centered mt data-text", "data-effect": "slide-right" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              "Consider that ",
+              _react2.default.createElement(
+                "span",
+                { className: "lg-text spice3", "data-effect": "slide-bottom" },
+                "39%"
+              ),
+              " of workers fall asleep during meetings"
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-5 col-md-pull-5 centered mt", "data-effect": "slide-left" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              _react2.default.createElement("i", { className: "ion-chatboxes lg-text" }),
+              _react2.default.createElement("br", null),
+              "INEFFECTIVE MEETINGS"
+            ),
+            _react2.default.createElement(
+              "div",
+              null,
+              _react2.default.createElement("div", { className: "small-seg spice3-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice3-bg" }),
+              _react2.default.createElement("div", { className: "small-seg spice3-bg" })
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Half of all meetings is considered useless. The average worker spends ",
+              _react2.default.createElement(
+                "strong",
+                null,
+                "31 hours a month"
+              ),
+              " in meetings. That's at least ",
+              _react2.default.createElement(
+                "strong",
+                null,
+                "12 hours sleeping"
+              ),
+              " on the job!"
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-6 col-md-offset-3 centered mtb2" },
+            _react2.default.createElement(
+              "h2",
+              null,
+              "WHAT DOES THIS ALL MEAN?"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "lg-text spice4", "data-effect": "slide-bottom" },
+              "37 Billion"
+            ),
+            _react2.default.createElement(
+              "h4",
+              null,
+              "US Dollars Lost Per Year"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "And that's only in the United States alone."
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "row nopadding no-margin-bot" },
+          _react2.default.createElement(
+            "div",
+            { className: "col-md-8 col-md-offset-2 centered" },
+            _react2.default.createElement(
+              "p",
+              { className: "view-sources" },
+              "Sources"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "sources" },
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://emailstatcenter.com/Usage.html" },
+                  "Email Usage/Penetrations"
+                ),
+                " • EmailStatCounter"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://www.ics.uci.edu/~gmark/Home_page/Research_files/CHI%202012.pdf" },
+                  "A Pace Not Dictated by Electrons"
+                ),
+                " • University of California"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://research.microsoft.com/en-us/um/people/horvitz/chi_2007_iqbal_horvitz.pdf" },
+                  "Disruption and Recovery of Computing Tasks"
+                ),
+                " • Microsoft Research"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://news.bbc.co.uk/1/hi/uk/4471607.stm" },
+                  "'Infomania' worse than marijuana"
+                ),
+                " • BBC News"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "https://e-meetings.verizonbusiness.com/global/en/meetingsinamerica/uswhitepaper.php" },
+                  "Meetings in America"
+                ),
+                " • Verizon Business"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://www.effectivemeetings.com/meetingbasics/meetstate.asp" },
+                  "State of Meetings Today"
+                ),
+                " • EffectiveMeetings"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://business.salary.com/why-how-your-employees-are-wasting-time-at-work/" },
+                  "Why & How Your Employees are Wasting Time at Work"
+                ),
+                " • Salary.com"
+              ),
+              _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                  "a",
+                  { href: "http://www.keyorganization.com/time-management-statistics.php" },
+                  "Time Management Statistics"
+                ),
+                " • Key Organization Systyems"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return ProblemsPage;
+}(_react2.default.Component);
+
+exports.default = ProblemsPage;
 });
 
 ;require.register("components/SignIn", function(exports, require, module) {
@@ -751,8 +1137,6 @@ exports.default = Top;
 
 var _reactDom = require('react-dom');
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -764,7 +1148,27 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
-  _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.querySelector('#app'));
+  (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.querySelector('#app'));
+});
+});
+
+require.register("initialize_problems", function(exports, require, module) {
+'use strict';
+
+var _reactDom = require('react-dom');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ProblemsPage = require('components/ProblemsPage');
+
+var _ProblemsPage2 = _interopRequireDefault(_ProblemsPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+  (0, _reactDom.render)(_react2.default.createElement(_ProblemsPage2.default, null), document.querySelector('#app'));
 });
 });
 

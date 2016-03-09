@@ -551,8 +551,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = require('react-router');
-
 var _Problem = require('./Problem');
 
 var _Problem2 = _interopRequireDefault(_Problem);

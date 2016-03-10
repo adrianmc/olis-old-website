@@ -76,6 +76,7 @@ body {
 }
 #curious h3 {
   color: #2f3f70;
+  font-weight: bold;
 }
 #curious p {
   color: #2f3f70;
@@ -122,6 +123,12 @@ footer p {
 footer p {
   font-size: 15px;
 }
+footer a {
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-right: 30px;
+}
 
 .primary {
   background-color: #2f3f70;
@@ -130,7 +137,8 @@ footer p {
   color: #fff;
 }
 #main-mockup h3 {
-  font-weight: 300;
+  font-weight: bold;
+  text-alight: center;
 }
 
 .primary {

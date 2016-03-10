@@ -232,27 +232,7 @@ exports.default = function () {
           _react2.default.createElement(
             "p",
             null,
-            "A collaborative document for your conversations."
-          ),
-          _react2.default.createElement(
-            "p",
-            null,
-            "Keep your team aligned on the same page."
-          ),
-          _react2.default.createElement(
-            "p",
-            null,
-            "Easily work with your teammates to generate meeting minutes and key takeaways and decisions."
-          ),
-          _react2.default.createElement(
-            "p",
-            null,
-            "Add tasks and assign them to people."
-          ),
-          _react2.default.createElement(
-            "p",
-            null,
-            "Add comments to sections that you aren't sure of."
+            "It's a collaborative document for your conversations. Keep your team aligned on the same page. Easily work with your teammates to generate meeting minutes and key takeaways and decisions. Add tasks and assign them to people. Add comments to sections that you want clarification on."
           )
         )
       ),
@@ -389,49 +369,26 @@ exports.default = function () {
       _react2.default.createElement(
         'div',
         { className: 'row' },
-        _react2.default.createElement(_Team2.default, null)
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
         _react2.default.createElement(
           'div',
           { className: 'col l6 s12' },
           _react2.default.createElement(
-            'h5',
-            null,
-            'About Olis'
+            'a',
+            { className: 'grey-text text-lighten-3', href: '/problems' },
+            'Why chat?'
           ),
           _react2.default.createElement(
-            'p',
-            null,
-            'The Olis team is composed of technology experts from San Francisco, Toronto, and Hong Kong. Olis is committed to empowering companies in Asia with the tools to be more productive.'
+            'a',
+            { className: 'grey-text text-lighten-3', href: '/benefits' },
+            'Benefits'
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'grey-text text-lighten-3', href: '/about' },
+            'About Us'
           )
         ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col l4 offset-l2 s12' },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'Contact Info'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'Unit 8, 3/f, Yue Fung Industrial Building',
-            _react2.default.createElement('br', null),
-            '35-45 Chai Wan Kok Street',
-            _react2.default.createElement('br', null),
-            'Tsuen Wan, Hong Kong',
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'a',
-              { href: 'mailto:info@OlisApp.com' },
-              'info@OlisApp.com'
-            )
-          )
-        )
+        _react2.default.createElement('div', { className: 'col l4 offset-l2 s12' })
       )
     ),
     _react2.default.createElement(
@@ -1045,7 +1002,7 @@ var ProblemsPage = function (_React$Component) {
           { id: 'problem-page-link-out', className: 'center' },
           _react2.default.createElement(
             'a',
-            { className: 'waves-effect waves-teal btn', href: '/' },
+            { className: 'waves-effect waves-light btn pink accent-2', href: '/' },
             'Find out how Olis can help'
           )
         ),

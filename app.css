@@ -206,17 +206,42 @@ body {
 .lightBg {
   background-color: #fff;
 }
-#create-account .input-field {
-  display: inline-block;
+.email-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email-container .input-field {
   width: 30%;
   margin-right: 30px;
 }
-.input-field input[type=email]:focus + label {
+/* Medium screens */
+@media all and (max-width: 1000px) {
+  .email-container {
+    flex-direction: column;
+  }
+  .email-container .input-field {
+    width: 80%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+/* Small screens */
+.light-email input {
   color: #fff;
 }
-.input-field input[type=email]:focus {
+.light-email .input-field label {
+  pointer-events: none;
+}
+.light-email .input-field input[type=email]:focus + label {
+  color: #fff;
+}
+.light-email .input-field input[type=email]:focus {
   border-bottom: 1px solid #fff;
   box-shadow: 0 1px 0 0 #000;
+}
+.light-email .input-field .prefix.active {
+  color: #fff;
 }
 
 .primaryBg {

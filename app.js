@@ -151,6 +151,10 @@ var _Footer = require('./Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _Email = require('./Email');
+
+var _Email2 = _interopRequireDefault(_Email);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -178,6 +182,7 @@ var App = function (_React$Component) {
         _react2.default.createElement(_Problems2.default, null),
         _react2.default.createElement(_MainMockup2.default, null),
         _react2.default.createElement(_Benefits2.default, null),
+        _react2.default.createElement(_Email2.default, null),
         _react2.default.createElement(_Footer2.default, null)
       );
     }
@@ -424,14 +429,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function () {
   return _react2.default.createElement(
     "div",
-    { id: "create-account" },
+    { className: "email-container" },
     _react2.default.createElement(
       "div",
-      { className: "input-field " },
-      _react2.default.createElement("input", { id: "email", type: "email", className: "validate lightText" }),
+      { className: "input-field" },
+      _react2.default.createElement(
+        "i",
+        { className: "material-icons prefix" },
+        "email"
+      ),
+      _react2.default.createElement("input", { id: "email", type: "email", className: "validate" }),
       _react2.default.createElement(
         "label",
-        { "for": "email" },
+        {
+          "for": "email",
+          "data-error": "Invalid.",
+          "data-success": "Ok!"
+        },
         "Email"
       )
     ),
@@ -1355,7 +1369,11 @@ var Top = function (_React$Component) {
             )
           )
         ),
-        _react2.default.createElement(_Email2.default, null),
+        _react2.default.createElement(
+          'div',
+          { className: 'light-email' },
+          _react2.default.createElement(_Email2.default, null)
+        ),
         _react2.default.createElement(_SignIn2.default, null)
       );
     }

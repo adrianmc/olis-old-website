@@ -498,7 +498,27 @@ exports.default = function () {
       _react2.default.createElement(
         "p",
         null,
-        "Using the notepad, you can be on the same page as your teammates. Keep your chats and notes in the same place. Summarize your meetings into minutes. Assign tasks. Brainstorm. Don't get bogged down by chat."
+        "Using our integrated chat and notepad solution, everyone in the team can now be on the same page no matter where they left off."
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "Keep your chats and notes in the same place."
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "Summarize your meetings into minutes or easily log important points and decisions for everyone to see. "
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "Assign tasks or brainstorm ideas. "
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "Never get bogged down by chat again."
       )
     ),
     _react2.default.createElement("img", {
@@ -529,7 +549,7 @@ exports.default = function (_ref) {
   var iconName = _ref.iconName;
   return _react2.default.createElement(
     "div",
-    { className: "problem col s12 m3 l3" },
+    { className: "problem" },
     _react2.default.createElement("i", { className: "icon " + iconName }),
     _react2.default.createElement(
       "p",
@@ -563,28 +583,32 @@ exports.default = function () {
     { id: 'problems' },
     _react2.default.createElement(
       'div',
-      { className: 'list row' },
+      { className: 'problems-and-header' },
       _react2.default.createElement(
         'div',
-        { className: 'col s12 m3 l3 header' },
+        { className: 'header' },
         _react2.default.createElement(
           'h4',
           null,
-          'Existing team chat software has problems.'
+          'What\'s wrong with existing team chat software?'
         )
       ),
-      _react2.default.createElement(_Problem2.default, {
-        text: 'You can get easily caught up in chatting all day.',
-        iconName: 'ion-clock'
-      }),
-      _react2.default.createElement(_Problem2.default, {
-        text: 'You can\'t find the relevant information easily.',
-        iconName: 'ion-map'
-      }),
-      _react2.default.createElement(_Problem2.default, {
-        text: 'Your voice gets drowned out in the crowd.',
-        iconName: 'ion-heart-broken'
-      })
+      _react2.default.createElement(
+        'div',
+        { className: 'problems-list' },
+        _react2.default.createElement(_Problem2.default, {
+          text: 'You can get easily caught up in chatting all day and not be able to catch up when you step away.',
+          iconName: 'ion-clock'
+        }),
+        _react2.default.createElement(_Problem2.default, {
+          text: 'You can\'t easily find the relevant take away information, highlights or key decisions.',
+          iconName: 'ion-map'
+        }),
+        _react2.default.createElement(_Problem2.default, {
+          text: 'You lack actionable results and next steps after chat.',
+          iconName: 'ion-heart-broken'
+        })
+      )
     ),
     _react2.default.createElement(
       'a',
@@ -1090,6 +1114,7 @@ var Top = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'h' },
+        _react2.default.createElement('div', { className: 'shadow' }),
         _react2.default.createElement(
           'div',
           { id: 'top', className: 'row' },
@@ -1105,7 +1130,7 @@ var Top = function (_React$Component) {
             _react2.default.createElement(
               'p',
               { className: 'one-liner' },
-              'A simple way to communicate with your team without all of the noise.'
+              'Effective team collaboration without all the noise.'
             ),
             _react2.default.createElement(
               'div',
@@ -1113,7 +1138,7 @@ var Top = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Chat can get messy. Forget about the endless meetings where nothing ever gets done. Easily summarize and highlight the key takeaways from your conversations so you can get back to work quicker.'
+                'Endless emails, meetings, and chats in the work place can be very unproductive. Chat then easily summarize, assign tasks, and highlight the key takeaways in one simple interface.'
               )
             )
           )
@@ -1143,7 +1168,13 @@ var _App = require('components/App');
 
 var _App2 = _interopRequireDefault(_App);
 
+var _reactTapEventPlugin = require('react-tap-event-plugin');
+
+var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _reactTapEventPlugin2.default)();
 
 document.addEventListener('DOMContentLoaded', function () {
   (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.querySelector('#app'));

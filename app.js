@@ -420,42 +420,84 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  return _react2.default.createElement(
-    "div",
-    { className: "email-container" },
-    _react2.default.createElement(
-      "div",
-      { className: "input-field" },
-      _react2.default.createElement(
-        "i",
-        { className: "material-icons prefix" },
-        "email"
-      ),
-      _react2.default.createElement("input", { id: "email", type: "email", className: "validate" }),
-      _react2.default.createElement(
-        "label",
-        {
-          "for": "email",
-          "data-error": "Invalid.",
-          "data-success": "Ok!"
-        },
-        "Email"
-      )
-    ),
-    _react2.default.createElement(
-      "a",
-      { className: "waves-effect waves-light btn pink accent-2" },
-      "Get on the waiting list!"
-    )
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Email = function (_React$Component) {
+  _inherits(Email, _React$Component);
+
+  function Email() {
+    _classCallCheck(this, Email);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Email).apply(this, arguments));
+  }
+
+  _createClass(Email, [{
+    key: "handleSubmit",
+    value: function handleSubmit() {
+      console.log("handleSubmit " + this.input.value);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        "div",
+        { className: "email-container" },
+        _react2.default.createElement(
+          "div",
+          { className: "input-field" },
+          _react2.default.createElement(
+            "i",
+            { className: "material-icons prefix" },
+            "email"
+          ),
+          _react2.default.createElement("input", {
+            id: "email",
+            type: "email",
+            className: "validate",
+            ref: function ref(_ref) {
+              return _this2.input = _ref;
+            }
+          }),
+          _react2.default.createElement(
+            "label",
+            {
+              "for": "email",
+              "data-error": "Invalid.",
+              "data-success": "Ok!"
+            },
+            "Email"
+          )
+        ),
+        _react2.default.createElement(
+          "a",
+          {
+            className: "waves-effect waves-light btn pink accent-2",
+            onClick: this.handleSubmit.bind(this)
+          },
+          "Get on the waiting list!"
+        )
+      );
+    }
+  }]);
+
+  return Email;
+}(_react2.default.Component);
+
+exports.default = Email;
 });
 
 ;require.register("components/Footer", function(exports, require, module) {
@@ -489,22 +531,56 @@ exports.default = function () {
           'div',
           { className: 'col l6 s12' },
           _react2.default.createElement(
-            'a',
-            { className: 'grey-text text-lighten-3', href: '/problems' },
-            'Why chat?'
+            'h5',
+            { 'class': 'white-text' },
+            'Contact Us'
           ),
           _react2.default.createElement(
-            'a',
-            { className: 'grey-text text-lighten-3', href: '/benefits' },
-            'Benefits'
-          ),
-          _react2.default.createElement(
-            'a',
-            { className: 'grey-text text-lighten-3', href: '/about' },
-            'About Us'
+            'p',
+            { 'class': 'grey-text text-lighten-4' },
+            _react2.default.createElement(
+              'a',
+              { href: 'mailto:info@OlisApp.com' },
+              'info@OlisApp.com'
+            )
           )
         ),
-        _react2.default.createElement('div', { className: 'col l4 offset-l2 s12' })
+        _react2.default.createElement(
+          'div',
+          { className: 'col l4 offset-l2 s12' },
+          _react2.default.createElement(
+            'h5',
+            { 'class': 'white-text' },
+            'Links'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { className: 'grey-text text-lighten-3', href: '/problems' },
+              'Why chat?'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { className: 'grey-text text-lighten-3', href: '/benefits' },
+              'Benefits'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              { className: 'grey-text text-lighten-3', href: '/about' },
+              'About Us'
+            )
+          )
+        )
       )
     ),
     _react2.default.createElement(
@@ -587,7 +663,7 @@ var Languages = function (_React$Component) {
             'data-beloworigin': 'true',
             'data-constrainwidth': 'false'
           },
-          'En'
+          'English'
         ),
         _react2.default.createElement(
           'ul',

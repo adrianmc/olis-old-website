@@ -403,6 +403,33 @@ footer a {
 .lightBg {
   background-color: #fff;
 }
+.terms-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.terms {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 55%;
+}
+.terms p {
+  text-align: justify;
+}
+
+.primaryBg {
+  background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
+}
 #h {
   background: url("./img/hero.jpg") no-repeat center center fixed;
   width: 100%;

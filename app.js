@@ -210,17 +210,17 @@ exports.default = function () {
           _react2.default.createElement(
             "p",
             null,
-            "You can easily work your teammates to generate efficient meeting minutes."
+            "Easily work with your teammates to generate meeting minutes and key takeaways and decisions."
           ),
           _react2.default.createElement(
             "p",
             null,
-            "You can add tasks and assign them to people."
+            "Add tasks and assign them to people."
           ),
           _react2.default.createElement(
             "p",
             null,
-            "You can add comments to sections that you aren't sure of."
+            "Add comments to sections that you aren't sure of."
           )
         )
       ),
@@ -234,6 +234,28 @@ exports.default = function () {
         )
       )
     )
+  );
+};
+});
+
+;require.register("components/BenefitsPage", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    'div',
+    null,
+    'Benefits page'
   );
 };
 });
@@ -381,7 +403,12 @@ exports.default = function () {
       _react2.default.createElement(
         'div',
         { className: 'container' },
-        '© 2016 OlisApp'
+        '© 2016 OlisApp ',
+        _react2.default.createElement(
+          'a',
+          { href: '#', style: { paddingLeft: '10px' } },
+          'Terms and conditions'
+        )
       )
     )
   );
@@ -1178,6 +1205,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener('DOMContentLoaded', function () {
   (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.querySelector('#app'));
+});
+});
+
+require.register("initialize_benefits", function(exports, require, module) {
+'use strict';
+
+var _reactDom = require('react-dom');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _BenefitsPage = require('components/BenefitsPage');
+
+var _BenefitsPage2 = _interopRequireDefault(_BenefitsPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+  (0, _reactDom.render)(_react2.default.createElement(_BenefitsPage2.default, null), document.querySelector('#app'));
 });
 });
 

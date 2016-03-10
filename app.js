@@ -203,11 +203,16 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (_ref) {
+  var _ref$header = _ref.header;
+  var header = _ref$header === undefined ? 'What a great benefit!' : _ref$header;
+  var _ref$text = _ref.text;
+  var text = _ref$text === undefined ? 'This benefit is so great because it helps you\n   do a lot of things and that\'s great because we all \n   have a lot of things to do and the days are \n   getting shorter and shorter and then you\'re dead.' : _ref$text;
   var _ref$textColor = _ref.textColor;
   var textColor = _ref$textColor === undefined ? 'primaryText' : _ref$textColor;
   var _ref$bgColor = _ref.bgColor;
   var bgColor = _ref$bgColor === undefined ? 'white' : _ref$bgColor;
-  var image = _ref.image;
+  var _ref$image = _ref.image;
+  var image = _ref$image === undefined ? 'overall.png' : _ref$image;
   return _react2.default.createElement(
     'div',
     { className: 'benefit-container ' + bgColor },
@@ -217,12 +222,12 @@ exports.default = function (_ref) {
       _react2.default.createElement(
         'h3',
         { className: '' + textColor },
-        'What a great benefit!'
+        header
       ),
       _react2.default.createElement(
         'p',
         { className: '' + textColor },
-        'This benefit is so great because it helps you do a lot of things and that\'s great because we all have a lot of things to do and the days are getting shorter and shorter and then you\'re dead.'
+        text
       )
     ),
     _react2.default.createElement(
@@ -230,8 +235,8 @@ exports.default = function (_ref) {
       { className: 'benefit-img' },
       _react2.default.createElement(
         'a',
-        { href: '../img/overall.png', 'data-lightbox': 'feature-shots', 'data-title': 'Instantly translate chat messages.', className: 'img-responsive' },
-        _react2.default.createElement('img', { src: '../img/overall.png', className: 'img-responsive feature-pic', alt: '', 'data-effect': 'slide-right' })
+        { href: '../img/' + image, 'data-lightbox': 'feature-shots', 'data-title': 'Instantly translate chat messages.', className: 'img-responsive' },
+        _react2.default.createElement('img', { src: '../img/' + image, className: 'img-responsive feature-pic', alt: '', 'data-effect': 'slide-right' })
       )
     )
   );
@@ -325,10 +330,41 @@ exports.default = function () {
     'div',
     null,
     _react2.default.createElement(_NavBar2.default, null),
-    _react2.default.createElement(_Benefit2.default, null),
-    _react2.default.createElement(_Benefit2.default, null),
-    _react2.default.createElement(_Benefit2.default, null),
-    _react2.default.createElement(_Benefit2.default, null)
+    _react2.default.createElement(_Benefit2.default, {
+      header: 'The notes',
+      text: '102103213',
+      textColor: 'primaryText',
+      bgColor: 'white',
+      image: 'overall.png'
+    }),
+    _react2.default.createElement(_Benefit2.default, {
+      header: 'The collab',
+      text: 'wtfroflcopter',
+      textColor: 'primaryText',
+      bgColor: 'white',
+      image: 'overall.png'
+    }),
+    _react2.default.createElement(_Benefit2.default, {
+      header: 'The notifications',
+      text: 'haha',
+      textColor: 'primaryText',
+      bgColor: 'white',
+      image: 'overall.png'
+    }),
+    _react2.default.createElement(_Benefit2.default, {
+      header: 'The teams',
+      text: 'sdas',
+      textColor: 'lightText',
+      bgColor: 'primaryBg',
+      image: 'overall.png'
+    }),
+    _react2.default.createElement(_Benefit2.default, {
+      header: 'The convos',
+      text: 'asd1111',
+      textColor: 'primaryText',
+      bgColor: 'white',
+      image: 'overall.png'
+    })
   );
 };
 });
@@ -372,7 +408,7 @@ exports.default = function (_ref) {
 };
 });
 
-;require.register("components/CreateAccount", function(exports, require, module) {
+;require.register("components/Email", function(exports, require, module) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -389,6 +425,16 @@ exports.default = function () {
   return _react2.default.createElement(
     "div",
     { id: "create-account" },
+    _react2.default.createElement(
+      "div",
+      { className: "input-field " },
+      _react2.default.createElement("input", { id: "email", type: "email", className: "validate lightText" }),
+      _react2.default.createElement(
+        "label",
+        { "for": "email" },
+        "Email"
+      )
+    ),
     _react2.default.createElement(
       "a",
       { className: "waves-effect waves-light btn pink accent-2" },
@@ -759,7 +805,7 @@ exports.default = function () {
         }),
         _react2.default.createElement(_Problem2.default, {
           text: 'Lacking actionable results and next steps after chat.',
-          iconName: 'ion-heart-broken'
+          iconName: 'ion-android-walk'
         })
       )
     ),
@@ -1253,9 +1299,9 @@ var _SignIn = require('./SignIn');
 
 var _SignIn2 = _interopRequireDefault(_SignIn);
 
-var _CreateAccount = require('./CreateAccount');
+var _Email = require('./Email');
 
-var _CreateAccount2 = _interopRequireDefault(_CreateAccount);
+var _Email2 = _interopRequireDefault(_Email);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1309,7 +1355,7 @@ var Top = function (_React$Component) {
             )
           )
         ),
-        _react2.default.createElement(_CreateAccount2.default, null),
+        _react2.default.createElement(_Email2.default, null),
         _react2.default.createElement(_SignIn2.default, null)
       );
     }

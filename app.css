@@ -5,6 +5,12 @@
 .primaryText {
   color: #2f3f70;
 }
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
+}
 * {
   box-sizing: border-box;
   font-family: Roboto;
@@ -67,6 +73,12 @@ body {
 }
 .primaryText {
   color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
 }
 #benefits {
   color: #2f3f70;
@@ -146,12 +158,24 @@ body {
 .primaryText {
   color: #2f3f70;
 }
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
+}
 
 .primaryBg {
   background-color: #2f3f70;
 }
 .primaryText {
   color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
 }
 .contact {
   margin-left: 5px;
@@ -175,6 +199,37 @@ body {
 }
 .primaryText {
   color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
+}
+#create-account .input-field {
+  display: inline-block;
+  width: 30%;
+  margin-right: 30px;
+}
+.input-field input[type=email]:focus + label {
+  color: #fff;
+}
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+.primaryBg {
+  background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
 }
 footer.page-footer {
   background-color: #2f3f70;
@@ -200,6 +255,12 @@ footer a {
 .primaryText {
   color: #2f3f70;
 }
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
+}
 #main-mockup * {
   color: #fff;
 }
@@ -213,6 +274,12 @@ footer a {
 }
 .primaryText {
   color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
 }
 .navbar-fixed .brand-logo {
   font-weight: bold;
@@ -228,6 +295,12 @@ footer a {
 }
 .primaryText {
   color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
 }
 #problems {
   padding: 50px;
@@ -298,6 +371,12 @@ footer a {
 }
 .primaryText {
   color: #2f3f70;
+}
+.lightText {
+  color: #fff;
+}
+.lightBg {
+  background-color: #fff;
 }
 #h {
   background: url("./img/hero.jpg") no-repeat center center fixed;

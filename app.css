@@ -417,6 +417,12 @@ footer a {
 .terms p {
   text-align: justify;
 }
+/* Medium screens */
+@media all and (max-width: 1000px) {
+  .terms-container .terms {
+    width: 80%;
+  }
+}
 
 .primaryBg {
   background-color: #2f3f70;

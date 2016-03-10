@@ -541,12 +541,12 @@ exports.default = function () {
           { className: 'col l6 s12' },
           _react2.default.createElement(
             'h5',
-            { 'class': 'white-text' },
+            { className: 'white-text' },
             'Contact Us'
           ),
           _react2.default.createElement(
             'p',
-            { 'class': 'grey-text text-lighten-4' },
+            { className: 'grey-text text-lighten-4' },
             _react2.default.createElement(
               'a',
               { href: 'mailto:info@OlisApp.com' },
@@ -559,7 +559,7 @@ exports.default = function () {
           { className: 'col l4 offset-l2 s12' },
           _react2.default.createElement(
             'h5',
-            { 'class': 'white-text' },
+            { className: 'white-text' },
             'Links'
           ),
           _react2.default.createElement(

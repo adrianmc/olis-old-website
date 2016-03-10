@@ -229,7 +229,7 @@ exports.default = function () {
         { className: "more-features" },
         _react2.default.createElement(
           "a",
-          { className: "waves-effect waves-teal btn-flat link" },
+          { className: "waves-effect waves-teal btn-flat link", href: "/benefits" },
           "Learn more about our other features!"
         )
       )
@@ -255,63 +255,43 @@ exports.default = function () {
   return _react2.default.createElement(
     "div",
     null,
-    "benefits page",
     _react2.default.createElement(
-      "nav",
-      null,
+      "div",
+      { className: "navbar-fixed" },
       _react2.default.createElement(
-        "div",
-        { className: "nav-wrapper" },
+        "nav",
+        null,
         _react2.default.createElement(
-          "a",
-          { href: "#", className: "brand-logo right" },
-          "Logo"
-        ),
-        _react2.default.createElement(
-          "ul",
-          { id: "nav-mobile", className: "left hide-on-med-and-down" },
+          "div",
+          { className: "nav-wrapper" },
           _react2.default.createElement(
-            "li",
-            null,
-            _react2.default.createElement(
-              "a",
-              { href: "sass.html" },
-              "Sass"
-            )
+            "a",
+            { href: "#!", className: "brand-logo" },
+            "Logo"
           ),
           _react2.default.createElement(
-            "li",
-            null,
+            "ul",
+            { className: "right hide-on-med-and-down" },
             _react2.default.createElement(
-              "a",
-              { href: "badges.html" },
-              "Components"
-            )
-          ),
-          _react2.default.createElement(
-            "li",
-            null,
+              "li",
+              null,
+              _react2.default.createElement(
+                "a",
+                { href: "sass.html" },
+                "Sass"
+              )
+            ),
             _react2.default.createElement(
-              "a",
-              { href: "collapsible.html" },
-              "JavaScript"
+              "li",
+              null,
+              _react2.default.createElement(
+                "a",
+                { href: "badges.html" },
+                "Components"
+              )
             )
           )
         )
-      )
-    ),
-    _react2.default.createElement(
-      "a",
-      { className: "waves-effect waves-light btn" },
-      "Stuff"
-    ),
-    _react2.default.createElement(
-      "a",
-      { className: "btn-floating btn-large waves-effect waves-light red" },
-      _react2.default.createElement(
-        "i",
-        { className: "material-icons" },
-        "add"
       )
     )
   );
@@ -740,6 +720,45 @@ var ProblemsPage = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { id: "g" },
+        _react2.default.createElement(
+          "div",
+          { className: "navbar-fixed" },
+          _react2.default.createElement(
+            "nav",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "nav-wrapper" },
+              _react2.default.createElement(
+                "a",
+                { href: "#!", className: "brand-logo" },
+                "Logo"
+              ),
+              _react2.default.createElement(
+                "ul",
+                { className: "right hide-on-med-and-down" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "sass.html" },
+                    "Sass"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "badges.html" },
+                    "Components"
+                  )
+                )
+              )
+            )
+          )
+        ),
         _react2.default.createElement(
           "div",
           { className: "row nopadding" },
@@ -1223,7 +1242,7 @@ var Top = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Endless emails, meetings, and chats in the work place can be very unproductive. Chat then easily summarize, assign tasks, and highlight the key takeaways in one simple interface.'
+                'Endless emails, meetings, and chats in the work place can be very unproductive. With Olis, chat then easily summarize the discussion, assign tasks, and highlight the key takeaways in one simple interface.'
               )
             )
           )

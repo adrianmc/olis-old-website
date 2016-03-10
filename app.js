@@ -189,6 +189,55 @@ var App = function (_React$Component) {
 exports.default = App;
 });
 
+;require.register("components/Benefit", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (_ref) {
+  var _ref$textColor = _ref.textColor;
+  var textColor = _ref$textColor === undefined ? 'primaryText' : _ref$textColor;
+  var _ref$bgColor = _ref.bgColor;
+  var bgColor = _ref$bgColor === undefined ? 'white' : _ref$bgColor;
+  var image = _ref.image;
+  return _react2.default.createElement(
+    'div',
+    { className: 'benefit-container ' + bgColor },
+    _react2.default.createElement(
+      'div',
+      { className: 'benefit-text' },
+      _react2.default.createElement(
+        'h3',
+        { className: '' + textColor },
+        'What a great benefit!'
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: '' + textColor },
+        'This benefit is so great because it helps you do a lot of things and that\'s great because we all have a lot of things to do and the days are getting shorter and shorter and then you\'re dead.'
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'benefit-img' },
+      _react2.default.createElement(
+        'a',
+        { href: '../img/overall.png', 'data-lightbox': 'feature-shots', 'data-title': 'Instantly translate chat messages.', className: 'img-responsive' },
+        _react2.default.createElement('img', { src: '../img/overall.png', className: 'img-responsive feature-pic', alt: '', 'data-effect': 'slide-right' })
+      )
+    )
+  );
+};
+});
+
 ;require.register("components/Benefits", function(exports, require, module) {
 "use strict";
 
@@ -265,6 +314,10 @@ var _NavBar = require('./NavBar');
 
 var _NavBar2 = _interopRequireDefault(_NavBar);
 
+var _Benefit = require('./Benefit');
+
+var _Benefit2 = _interopRequireDefault(_Benefit);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
@@ -272,7 +325,10 @@ exports.default = function () {
     'div',
     null,
     _react2.default.createElement(_NavBar2.default, null),
-    'Benefits page'
+    _react2.default.createElement(_Benefit2.default, null),
+    _react2.default.createElement(_Benefit2.default, null),
+    _react2.default.createElement(_Benefit2.default, null),
+    _react2.default.createElement(_Benefit2.default, null)
   );
 };
 });
@@ -596,7 +652,7 @@ exports.default = function () {
         null,
         _react2.default.createElement(
           "div",
-          { className: "nav-wrapper primary" },
+          { className: "nav-wrapper primaryBg" },
           _react2.default.createElement(
             "a",
             { href: "/", className: "brand-logo" },

@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Roboto:400,300,500,700");
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 * {
   box-sizing: border-box;
@@ -59,8 +62,11 @@ body {
   align-items: center;
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 #benefits {
   color: #2f3f70;
@@ -84,13 +90,68 @@ body {
 #malibu {
   background-color: #253256;
 }
-
-.primary {
-  background-color: #2f3f70;
+.benefit-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+}
+.benefit-container h3 {
+  font-weight: bold;
+}
+.benefit-container p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.benefit-container .benefit-img {
+  width: 45%;
+}
+.benefit-container .benefit-text {
+  width: 45%;
+}
+/* Medium screens */
+@media all and (max-width: 1000px) {
+  .benefit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  .benefit-container .benefit-img {
+    width: 100%;
+  }
+  .benefit-container .benefit-text {
+    width: 100%;
+  }
+}
+/* Small screens */
+@media all and (max-width: 800px) {
+  .benefit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .benefit-container .benefit-img {
+    width: 100%;
+  }
+  .benefit-container .benefit-text {
+    width: 100%;
+  }
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
+}
+
+.primaryBg {
+  background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 .contact {
   margin-left: 5px;
@@ -109,8 +170,11 @@ body {
   padding: 0;
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 footer.page-footer {
   background-color: #2f3f70;
@@ -130,19 +194,25 @@ footer a {
   margin-right: 30px;
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 #main-mockup * {
   color: #fff;
 }
 #main-mockup h3 {
   font-weight: bold;
-  text-alight: center;
+  text-align: center;
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 .navbar-fixed .brand-logo {
   font-weight: bold;
@@ -153,8 +223,11 @@ footer a {
   font-weight: 300;
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 #problems {
   padding: 50px;
@@ -220,8 +293,11 @@ footer a {
   }
 }
 
-.primary {
+.primaryBg {
   background-color: #2f3f70;
+}
+.primaryText {
+  color: #2f3f70;
 }
 #h {
   background: url("./img/hero.jpg") no-repeat center center fixed;

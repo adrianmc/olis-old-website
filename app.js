@@ -239,13 +239,13 @@ exports.default = function () {
 });
 
 ;require.register("components/BenefitsPage", function(exports, require, module) {
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -253,9 +253,67 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function () {
   return _react2.default.createElement(
-    'div',
+    "div",
     null,
-    'Benefits page'
+    "benefits page",
+    _react2.default.createElement(
+      "nav",
+      null,
+      _react2.default.createElement(
+        "div",
+        { className: "nav-wrapper" },
+        _react2.default.createElement(
+          "a",
+          { href: "#", className: "brand-logo right" },
+          "Logo"
+        ),
+        _react2.default.createElement(
+          "ul",
+          { id: "nav-mobile", className: "left hide-on-med-and-down" },
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "sass.html" },
+              "Sass"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "badges.html" },
+              "Components"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "collapsible.html" },
+              "JavaScript"
+            )
+          )
+        )
+      )
+    ),
+    _react2.default.createElement(
+      "a",
+      { className: "waves-effect waves-light btn" },
+      "Stuff"
+    ),
+    _react2.default.createElement(
+      "a",
+      { className: "btn-floating btn-large waves-effect waves-light red" },
+      _react2.default.createElement(
+        "i",
+        { className: "material-icons" },
+        "add"
+      )
+    )
   );
 };
 });
@@ -1195,13 +1253,7 @@ var _App = require('components/App');
 
 var _App2 = _interopRequireDefault(_App);
 
-var _reactTapEventPlugin = require('react-tap-event-plugin');
-
-var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _reactTapEventPlugin2.default)();
 
 document.addEventListener('DOMContentLoaded', function () {
   (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.querySelector('#app'));

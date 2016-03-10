@@ -166,7 +166,9 @@ footer p {
 }
 
 #h {
-  background-image: url("./img/hero.jpg");
+  background: url("./img/hero.jpg") no-repeat center center fixed;
+  width: 100%;
+  background-size: cover;
   position: relative;
 }
 #top .one-liner {

@@ -91,7 +91,34 @@
   require._cache = cache;
   globals.require = require;
 })();
-require.register("components/App", function(exports, require, module) {
+require.register("components/AboutUsPage", function(exports, require, module) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _NavBar = require('./NavBar');
+
+var _NavBar2 = _interopRequireDefault(_NavBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_NavBar2.default, null),
+    'About Us'
+  );
+};
+});
+
+;require.register("components/App", function(exports, require, module) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -205,7 +232,12 @@ exports.default = function () {
           _react2.default.createElement(
             "p",
             null,
-            "The Notepad is a collaborative document for your conversations."
+            "A collaborative document for your conversations."
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Keep your team aligned on the same page."
           ),
           _react2.default.createElement(
             "p",
@@ -230,7 +262,7 @@ exports.default = function () {
         _react2.default.createElement(
           "a",
           { className: "waves-effect waves-teal btn-flat link", href: "/benefits" },
-          "Learn more about our other features!"
+          "Learn more about what Olis can do for you"
         )
       )
     )
@@ -239,61 +271,28 @@ exports.default = function () {
 });
 
 ;require.register("components/BenefitsPage", function(exports, require, module) {
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _NavBar = require('./NavBar');
+
+var _NavBar2 = _interopRequireDefault(_NavBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
   return _react2.default.createElement(
-    "div",
+    'div',
     null,
-    _react2.default.createElement(
-      "div",
-      { className: "navbar-fixed" },
-      _react2.default.createElement(
-        "nav",
-        null,
-        _react2.default.createElement(
-          "div",
-          { className: "nav-wrapper" },
-          _react2.default.createElement(
-            "a",
-            { href: "#!", className: "brand-logo" },
-            "Logo"
-          ),
-          _react2.default.createElement(
-            "ul",
-            { className: "right hide-on-med-and-down" },
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "sass.html" },
-                "Sass"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "badges.html" },
-                "Components"
-              )
-            )
-          )
-        )
-      )
-    )
+    _react2.default.createElement(_NavBar2.default, null),
+    'Benefits page'
   );
 };
 });
@@ -556,9 +555,9 @@ exports.default = function () {
       "div",
       { className: "text" },
       _react2.default.createElement(
-        "h2",
+        "h3",
         null,
-        "Olis to the rescue."
+        "Make chat productive."
       ),
       _react2.default.createElement(
         "p",
@@ -568,22 +567,7 @@ exports.default = function () {
       _react2.default.createElement(
         "p",
         null,
-        "Keep your chats and notes in the same place."
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Summarize your meetings into minutes or easily log important points and decisions for everyone to see. "
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Assign tasks or brainstorm ideas. "
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Never get bogged down by chat again."
+        "Keep your chats and notes in the same place. Summarize your meetings into minutes or easily log important points and decisions for everyone to see. Assign tasks or brainstorm ideas."
       )
     ),
     _react2.default.createElement("img", {
@@ -592,6 +576,97 @@ exports.default = function () {
       alt: "",
       "data-effect": "slide-bottom"
     })
+  );
+};
+});
+
+;require.register("components/NavBar", function(exports, require, module) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Items = function Items() {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "li",
+      null,
+      _react2.default.createElement(
+        "a",
+        { href: "/problems" },
+        "Why chat?"
+      )
+    ),
+    _react2.default.createElement(
+      "li",
+      null,
+      _react2.default.createElement(
+        "a",
+        { href: "/benefits" },
+        "Benefits"
+      )
+    ),
+    _react2.default.createElement(
+      "li",
+      null,
+      _react2.default.createElement(
+        "a",
+        { href: "/about" },
+        "About Us"
+      )
+    )
+  );
+};
+
+exports.default = function () {
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "navbar-fixed" },
+      _react2.default.createElement(
+        "nav",
+        null,
+        _react2.default.createElement(
+          "div",
+          { className: "nav-wrapper primary" },
+          _react2.default.createElement(
+            "a",
+            { href: "/", className: "brand-logo" },
+            "Olis"
+          ),
+          _react2.default.createElement(
+            "a",
+            { href: "#", "data-activates": "mobile-demo", className: "button-collapse" },
+            _react2.default.createElement(
+              "i",
+              { className: "material-icons" },
+              "menu"
+            )
+          ),
+          _react2.default.createElement(
+            "ul",
+            { className: "right hide-on-med-and-down" },
+            _react2.default.createElement(Items, null)
+          ),
+          _react2.default.createElement(
+            "ul",
+            { className: "side-nav", id: "mobile-demo" },
+            _react2.default.createElement(Items, null)
+          )
+        )
+      )
+    )
   );
 };
 });
@@ -655,22 +730,22 @@ exports.default = function () {
         _react2.default.createElement(
           'h4',
           null,
-          'What\'s wrong with existing team chat software?'
+          'What\'s wrong with existing team chat apps?'
         )
       ),
       _react2.default.createElement(
         'div',
         { className: 'problems-list' },
         _react2.default.createElement(_Problem2.default, {
-          text: 'You can get easily caught up in chatting all day and not be able to catch up when you step away.',
+          text: 'Needing to be engaged in the chat all day and not being able to catch up after you step away.',
           iconName: 'ion-clock'
         }),
         _react2.default.createElement(_Problem2.default, {
-          text: 'You can\'t easily find the relevant take away information, highlights or key decisions.',
+          text: 'Not being able to find the relevant take away information, highlights, or key decisions.',
           iconName: 'ion-map'
         }),
         _react2.default.createElement(_Problem2.default, {
-          text: 'You lack actionable results and next steps after chat.',
+          text: 'Lacking actionable results and next steps after chat.',
           iconName: 'ion-heart-broken'
         })
       )
@@ -685,7 +760,7 @@ exports.default = function () {
 });
 
 ;require.register("components/ProblemsPage", function(exports, require, module) {
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -693,9 +768,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _NavBar = require('./NavBar');
+
+var _NavBar2 = _interopRequireDefault(_NavBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -715,384 +794,354 @@ var ProblemsPage = function (_React$Component) {
   }
 
   _createClass(ProblemsPage, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { id: "g" },
+        'div',
+        { id: 'g' },
+        _react2.default.createElement(_NavBar2.default, null),
         _react2.default.createElement(
-          "div",
-          { className: "navbar-fixed" },
+          'div',
+          { className: 'row nopadding' },
           _react2.default.createElement(
-            "nav",
-            null,
+            'div',
+            { className: 'col-md-6 col-md-offset-3 centered mt' },
             _react2.default.createElement(
-              "div",
-              { className: "nav-wrapper" },
-              _react2.default.createElement(
-                "a",
-                { href: "#!", className: "brand-logo" },
-                "Logo"
-              ),
-              _react2.default.createElement(
-                "ul",
-                { className: "right hide-on-med-and-down" },
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  _react2.default.createElement(
-                    "a",
-                    { href: "sass.html" },
-                    "Sass"
-                  )
-                ),
-                _react2.default.createElement(
-                  "li",
-                  null,
-                  _react2.default.createElement(
-                    "a",
-                    { href: "badges.html" },
-                    "Components"
-                  )
-                )
-              )
+              'h1',
+              null,
+              'So why do I need a team chat solution?'
+            ),
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement('div', { className: 'small-seg grey-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg grey-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg grey-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg grey-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg grey-bg' })
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Even the best companies are unproductive.'
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "row nopadding" },
+          'div',
+          { className: 'row nopadding of' },
           _react2.default.createElement(
-            "div",
-            { className: "col-md-6 col-md-offset-3 centered mt" },
+            'div',
+            { className: 'col-md-5 col-md-offset-1 centered mt data-text', 'data-effect': 'slide-left' },
             _react2.default.createElement(
-              "h1",
+              'h2',
               null,
-              "THE PROBLEM"
-            ),
-            _react2.default.createElement(
-              "div",
-              null,
-              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
-              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
-              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
-              _react2.default.createElement("div", { className: "small-seg grey-bg" }),
-              _react2.default.createElement("div", { className: "small-seg grey-bg" })
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Even the best companies are unproductive."
-            )
-          )
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "row nopadding of" },
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-5 col-md-offset-1 centered mt data-text", "data-effect": "slide-left" },
-            _react2.default.createElement(
-              "h2",
-              null,
-              "At least ",
+              'At least ',
               _react2.default.createElement(
-                "span",
-                { className: "lg-text spice1", "data-effect": "slide-bottom" },
-                "40%"
+                'span',
+                { className: 'lg-text spice1', 'data-effect': 'slide-bottom' },
+                '40%'
               ),
-              " of time at work is unproductive"
+              ' of time at work is unproductive'
             )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 centered mt", "data-effect": "slide-right" },
+            'div',
+            { className: 'col-md-5 centered mt', 'data-effect': 'slide-right' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              _react2.default.createElement("i", { className: "ion-clock lg-text" }),
-              _react2.default.createElement("br", null),
-              "WASTED TIME"
+              _react2.default.createElement('i', { className: 'ion-clock lg-text' }),
+              _react2.default.createElement('br', null),
+              'WASTED TIME'
             ),
             _react2.default.createElement(
-              "div",
+              'div',
               null,
-              _react2.default.createElement("div", { className: "small-seg spice1-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice1-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice1-bg" })
+              _react2.default.createElement('div', { className: 'small-seg spice1-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice1-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice1-bg' })
             ),
             _react2.default.createElement(
-              "p",
+              'p',
               null,
-              "People can seem busy for hours at a time. But how much of that is actually productive work?"
+              'People can seem busy for hours at a time. But how much of that is actually productive work?'
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "row nopadding of" },
+          'div',
+          { className: 'row nopadding of' },
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 col-md-offset-1 col-md-push-5 centered mt data-text", "data-effect": "slide-right" },
+            'div',
+            { className: 'col-md-5 col-md-offset-1 col-md-push-5 centered mt data-text', 'data-effect': 'slide-right' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              "It takes ",
+              'It takes ',
               _react2.default.createElement(
-                "span",
-                { className: "lg-text spice2", "data-effect": "slide-bottom" },
-                "16"
+                'span',
+                { className: 'lg-text spice2', 'data-effect': 'slide-bottom' },
+                '16'
               ),
-              " minutes for workers to refocus after email alerts"
+              ' minutes for workers to refocus after email alerts'
             )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 col-md-pull-5 centered mt", "data-effect": "slide-left" },
+            'div',
+            { className: 'col-md-5 col-md-pull-5 centered mt', 'data-effect': 'slide-left' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              _react2.default.createElement("i", { className: "ion-email lg-text" }),
-              _react2.default.createElement("br", null),
-              "EXCESSIVE EMAILS"
+              _react2.default.createElement('i', { className: 'ion-email lg-text' }),
+              _react2.default.createElement('br', null),
+              'EXCESSIVE EMAILS'
             ),
             _react2.default.createElement(
-              "div",
+              'div',
               null,
-              _react2.default.createElement("div", { className: "small-seg spice2-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice2-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice2-bg" })
+              _react2.default.createElement('div', { className: 'small-seg spice2-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice2-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice2-bg' })
             ),
             _react2.default.createElement(
-              "p",
+              'p',
               null,
-              "Workers check their email ",
+              'Workers check their email ',
               _react2.default.createElement(
-                "strong",
+                'strong',
                 null,
-                "35 times"
+                '35 times'
               ),
-              " per hour. Think about how much money is lost due to these interruptions."
+              ' per hour. Think about how much money is lost due to these interruptions.'
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "row nopadding of" },
+          'div',
+          { className: 'row nopadding of' },
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 col-md-offset-1 centered mt data-text", "data-effect": "slide-left" },
+            'div',
+            { className: 'col-md-5 col-md-offset-1 centered mt data-text', 'data-effect': 'slide-left' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              "Up to ",
+              'Up to ',
               _react2.default.createElement(
-                "span",
-                { className: "lg-text spice5", "data-effect": "slide-bottom" },
-                "80%"
+                'span',
+                { className: 'lg-text spice5', 'data-effect': 'slide-bottom' },
+                '80%'
               ),
-              " of all interruptions are considered trivial"
+              ' of all interruptions are considered trivial'
             )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 centered mt", "data-effect": "slide-right" },
+            'div',
+            { className: 'col-md-5 centered mt', 'data-effect': 'slide-right' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              _react2.default.createElement("i", { className: "ion-arrow-graph-down-right lg-text" }),
-              _react2.default.createElement("br", null),
-              "CONSTANT INTERRUPTION"
+              _react2.default.createElement('i', { className: 'ion-arrow-graph-down-right lg-text' }),
+              _react2.default.createElement('br', null),
+              'CONSTANT INTERRUPTION'
             ),
             _react2.default.createElement(
-              "div",
+              'div',
               null,
-              _react2.default.createElement("div", { className: "small-seg spice5-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice5-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice5-bg" })
+              _react2.default.createElement('div', { className: 'small-seg spice5-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice5-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice5-bg' })
             ),
             _react2.default.createElement(
-              "p",
+              'p',
               null,
-              "Emails, phone calls, and other disruptions often derail a worker's productivity constantly throughout the workday."
+              'Emails, phone calls, and other disruptions often derail a worker\'s productivity constantly throughout the workday.'
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "row nopadding of" },
+          'div',
+          { className: 'row nopadding of' },
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 col-md-offset-1 col-md-push-5 centered mt data-text", "data-effect": "slide-right" },
+            'div',
+            { className: 'col-md-5 col-md-offset-1 col-md-push-5 centered mt data-text', 'data-effect': 'slide-right' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              "Consider that ",
               _react2.default.createElement(
-                "span",
-                { className: "lg-text spice3", "data-effect": "slide-bottom" },
-                "39%"
+                'span',
+                { className: 'lg-text spice3', 'data-effect': 'slide-bottom' },
+                '39%'
               ),
-              " of workers fall asleep during meetings"
+              ' of workers fall asleep during meetings'
             )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "col-md-5 col-md-pull-5 centered mt", "data-effect": "slide-left" },
+            'div',
+            { className: 'col-md-5 col-md-pull-5 centered mt', 'data-effect': 'slide-left' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              _react2.default.createElement("i", { className: "ion-chatboxes lg-text" }),
-              _react2.default.createElement("br", null),
-              "INEFFECTIVE MEETINGS"
+              _react2.default.createElement('i', { className: 'ion-chatboxes lg-text' }),
+              _react2.default.createElement('br', null),
+              'INEFFECTIVE MEETINGS'
             ),
             _react2.default.createElement(
-              "div",
+              'div',
               null,
-              _react2.default.createElement("div", { className: "small-seg spice3-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice3-bg" }),
-              _react2.default.createElement("div", { className: "small-seg spice3-bg" })
+              _react2.default.createElement('div', { className: 'small-seg spice3-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice3-bg' }),
+              _react2.default.createElement('div', { className: 'small-seg spice3-bg' })
             ),
             _react2.default.createElement(
-              "p",
+              'p',
               null,
-              "Half of all meetings is considered useless. The average worker spends ",
+              'Half of all meetings is considered useless. The average worker spends ',
               _react2.default.createElement(
-                "strong",
+                'strong',
                 null,
-                "31 hours a month"
+                '31 hours a month'
               ),
-              " in meetings. That's at least ",
+              ' in meetings. That\'s at least ',
               _react2.default.createElement(
-                "strong",
+                'strong',
                 null,
-                "12 hours sleeping"
+                '12 hours sleeping'
               ),
-              " on the job!"
+              ' on the job!'
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "row nopadding" },
+          'div',
+          { className: 'row nopadding' },
           _react2.default.createElement(
-            "div",
-            { className: "col-md-6 col-md-offset-3 centered mtb2" },
+            'div',
+            { className: 'col-md-6 col-md-offset-3 centered mtb2' },
             _react2.default.createElement(
-              "h2",
+              'h2',
               null,
-              "WHAT DOES THIS ALL MEAN?"
+              'WHAT DOES THIS ALL MEAN?'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "lg-text spice4", "data-effect": "slide-bottom" },
-              "37 Billion"
+              'div',
+              { className: 'lg-text spice4', 'data-effect': 'slide-bottom' },
+              '37 Billion'
             ),
             _react2.default.createElement(
-              "h4",
+              'h4',
               null,
-              "US Dollars Lost Per Year"
+              'US Dollars Lost Per Year'
             ),
             _react2.default.createElement(
-              "p",
+              'p',
               null,
-              "And that's only in the United States alone."
+              'And that\'s only in the United States alone.'
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "row nopadding no-margin-bot" },
+          'div',
+          { id: 'problem-page-link-out', className: 'center' },
           _react2.default.createElement(
-            "div",
-            { className: "col-md-8 col-md-offset-2 centered" },
+            'a',
+            { className: 'waves-effect waves-teal btn', href: '/' },
+            'Find out how Olis can help'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row nopadding no-margin-bot' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-8 col-md-offset-2 centered' },
             _react2.default.createElement(
-              "p",
-              { className: "view-sources" },
-              "Sources"
+              'p',
+              { className: 'view-sources' },
+              'Sources'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "sources" },
+              'div',
+              { className: 'sources' },
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://emailstatcenter.com/Usage.html" },
-                  "Email Usage/Penetrations"
+                  'a',
+                  { href: 'http://emailstatcenter.com/Usage.html' },
+                  'Email Usage/Penetrations'
                 ),
-                " • EmailStatCounter"
+                ' • EmailStatCounter'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://www.ics.uci.edu/~gmark/Home_page/Research_files/CHI%202012.pdf" },
-                  "A Pace Not Dictated by Electrons"
+                  'a',
+                  { href: 'http://www.ics.uci.edu/~gmark/Home_page/Research_files/CHI%202012.pdf' },
+                  'A Pace Not Dictated by Electrons'
                 ),
-                " • University of California"
+                ' • University of California'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://research.microsoft.com/en-us/um/people/horvitz/chi_2007_iqbal_horvitz.pdf" },
-                  "Disruption and Recovery of Computing Tasks"
+                  'a',
+                  { href: 'http://research.microsoft.com/en-us/um/people/horvitz/chi_2007_iqbal_horvitz.pdf' },
+                  'Disruption and Recovery of Computing Tasks'
                 ),
-                " • Microsoft Research"
+                ' • Microsoft Research'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://news.bbc.co.uk/1/hi/uk/4471607.stm" },
-                  "'Infomania' worse than marijuana"
+                  'a',
+                  { href: 'http://news.bbc.co.uk/1/hi/uk/4471607.stm' },
+                  '\'Infomania\' worse than marijuana'
                 ),
-                " • BBC News"
+                ' • BBC News'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "https://e-meetings.verizonbusiness.com/global/en/meetingsinamerica/uswhitepaper.php" },
-                  "Meetings in America"
+                  'a',
+                  { href: 'https://e-meetings.verizonbusiness.com/global/en/meetingsinamerica/uswhitepaper.php' },
+                  'Meetings in America'
                 ),
-                " • Verizon Business"
+                ' • Verizon Business'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://www.effectivemeetings.com/meetingbasics/meetstate.asp" },
-                  "State of Meetings Today"
+                  'a',
+                  { href: 'http://www.effectivemeetings.com/meetingbasics/meetstate.asp' },
+                  'State of Meetings Today'
                 ),
-                " • EffectiveMeetings"
+                ' • EffectiveMeetings'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://business.salary.com/why-how-your-employees-are-wasting-time-at-work/" },
-                  "Why & How Your Employees are Wasting Time at Work"
+                  'a',
+                  { href: 'http://business.salary.com/why-how-your-employees-are-wasting-time-at-work/' },
+                  'Why & How Your Employees are Wasting Time at Work'
                 ),
-                " • Salary.com"
+                ' • Salary.com'
               ),
               _react2.default.createElement(
-                "p",
+                'p',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://www.keyorganization.com/time-management-statistics.php" },
-                  "Time Management Statistics"
+                  'a',
+                  { href: 'http://www.keyorganization.com/time-management-statistics.php' },
+                  'Time Management Statistics'
                 ),
-                " • Key Organization Systyems"
+                ' • Key Organization Systyems'
               )
             )
           )
@@ -1242,7 +1291,7 @@ var Top = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'Endless emails, meetings, and chats in the work place can be very unproductive. With Olis, chat then easily summarize the discussion, assign tasks, and highlight the key takeaways in one simple interface.'
+                'Endless emails, meetings, and chats in the work place can be very unproductive. With Olis, easily chat and summarize the discussion, assign tasks, and highlight the key takeaways in one simple interface.'
               )
             )
           )
@@ -1279,6 +1328,27 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 });
 
+require.register("initialize_about", function(exports, require, module) {
+'use strict';
+
+var _reactDom = require('react-dom');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _AboutUsPage = require('components/AboutUsPage');
+
+var _AboutUsPage2 = _interopRequireDefault(_AboutUsPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+  (0, _reactDom.render)(_react2.default.createElement(_AboutUsPage2.default, null), document.querySelector('#app'));
+  $(".button-collapse").sideNav();
+});
+});
+
 require.register("initialize_benefits", function(exports, require, module) {
 'use strict';
 
@@ -1296,6 +1366,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener('DOMContentLoaded', function () {
   (0, _reactDom.render)(_react2.default.createElement(_BenefitsPage2.default, null), document.querySelector('#app'));
+  $(".button-collapse").sideNav();
 });
 });
 
@@ -1316,6 +1387,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 document.addEventListener('DOMContentLoaded', function () {
   (0, _reactDom.render)(_react2.default.createElement(_ProblemsPage2.default, null), document.querySelector('#app'));
+  $(".button-collapse").sideNav();
 });
 });
 

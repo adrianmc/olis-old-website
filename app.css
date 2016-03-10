@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Roboto:400,300,500,700");
+.primary {
+  background-color: #2f3f70;
+}
 * {
   box-sizing: border-box;
   font-family: Roboto;
@@ -28,7 +31,7 @@ body {
 #main-mockup .text p {
   color: #fff;
   width: 65%;
-  text-align: center;
+  text-align: left;
 }
 #main-mockup img {
   padding: 0px;
@@ -56,6 +59,9 @@ body {
   align-items: center;
 }
 
+.primary {
+  background-color: #2f3f70;
+}
 #benefits {
   color: #2f3f70;
   display: flex;
@@ -78,7 +84,13 @@ body {
   background-color: #253256;
 }
 
+.primary {
+  background-color: #2f3f70;
+}
 
+.primary {
+  background-color: #2f3f70;
+}
 .contact {
   margin-left: 5px;
   margin-right: 5px;
@@ -96,6 +108,9 @@ body {
   padding: 0;
 }
 
+.primary {
+  background-color: #2f3f70;
+}
 footer.page-footer {
   background-color: #2f3f70;
 }
@@ -108,10 +123,31 @@ footer p {
   font-size: 15px;
 }
 
-#main-mockup h2 {
+.primary {
+  background-color: #2f3f70;
+}
+#main-mockup * {
   color: #fff;
 }
+#main-mockup h3 {
+  font-weight: 300;
+}
 
+.primary {
+  background-color: #2f3f70;
+}
+.navbar-fixed .brand-logo {
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar-fixed li {
+  font-weight: 300;
+}
+
+.primary {
+  background-color: #2f3f70;
+}
 #problems {
   padding: 50px;
   display: flex;
@@ -141,6 +177,11 @@ footer p {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  margin-right: 20px;
+}
+#problems .header h4 {
+  font-weight: 300;
+  text-align: center;
 }
 .problem {
   display: flex;
@@ -148,6 +189,12 @@ footer p {
   align-items: center;
   width: 40%;
   margin: 10px;
+}
+.no-margin-bot {
+  margin-bottom: 0px;
+}
+#problem-page-link-out {
+  margin-bottom: 40px;
 }
 /* Small screens */
 @media all and (max-width: 500px) {
@@ -157,14 +204,17 @@ footer p {
   #problems .problems-list {
     flex-direction: column;
   }
+  #problems .header {
+    margin-right: 0px;
+  }
   .problem {
     width: 100%;
   }
 }
-.no-margin-bot {
-  margin-bottom: 0px;
-}
 
+.primary {
+  background-color: #2f3f70;
+}
 #h {
   background: url("./img/hero.jpg") no-repeat center center fixed;
   width: 100%;

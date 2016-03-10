@@ -182,7 +182,16 @@ var App = function (_React$Component) {
         _react2.default.createElement(_Problems2.default, null),
         _react2.default.createElement(_MainMockup2.default, null),
         _react2.default.createElement(_Benefits2.default, null),
-        _react2.default.createElement(_Email2.default, null),
+        _react2.default.createElement(
+          'div',
+          { className: 'bottom-email light-email' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Chat less, be more productive.'
+          ),
+          _react2.default.createElement(_Email2.default, null)
+        ),
         _react2.default.createElement(_Footer2.default, null)
       );
     }
